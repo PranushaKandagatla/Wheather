@@ -1,5 +1,5 @@
 <div class = "NewSearch">
-<input type="text" placeholder="Please type Share name " #SearchElement>
+<input type="text" placeholder="Please enter a place name " #SearchElement>
 <button type="button" name="button" (click) = "this.getClick(SearchElement.value);">Search</button>
 </div>
 <div class = "ValueElements" >
@@ -16,13 +16,14 @@
 		<tr>
 			<th>Stock Name</th>
 			<th>Last Access Time</th>
+			<th>Sunday</th>
 			<th>Monday</th>
-			<th>sunday</th>
 			<th>Tuesday</th>
-			<th>Thursday</th>
 			<th>Wednesday</th>
-			<th>saturday</th>
+			<th>Thursday</th>
 			<th>Friday</th>
+			<th>Saturday</th>
+			
 		</tr>
 		<tr *ngFor = 'let pastWeather of this.pastSearchValue' (click) = 'this.getClick(pastWeather.SearchElement)'>
 			<td>{{pastWeather.SearchElement}}</td>
